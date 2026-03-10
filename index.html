@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAST WIN</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main-wrapper">
+
+<div class="logo">
+    <img src="logoo.png" alt="FastWin Logo">
+</div>
+
+<div class="container">
+
+    <h2 id="title">Register</h2>
+
+    <select id="countryCode">
+        <option value="+91">IN +91</option>
+        <option value="+1">US +1</option>
+        <option value="+44">UK +44</option>
+    </select>
+
+    <input type="text" id="phone" placeholder="Phone Number">
+
+    <input type="password" id="password" placeholder="Password">
+
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+
+    <!-- CAPTCHA SECTION -->
+    <div id="captchaSection">
+        <div class="captcha-box">
+            <span id="captchaText"></span>
+            <button type="button" onclick="generateCaptcha()">↻</button>
+        </div>
+        <input type="text" id="captchaInput" placeholder="Enter Captcha">
+    </div>
+
+    <div class="error" id="error"></div>
+
+    <button id="registerBtn" onclick="register()">Register</button>
+    <button id="loginBtn" onclick="login()" class="hidden">Login</button>
+
+    <div class="toggle" onclick="toggleMode()" id="toggleText">
+        Already have account? Login
+    </div>
+
+    <div class="toggle hidden" onclick="showForgot()" id="forgotText">
+        Forgot Password?
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

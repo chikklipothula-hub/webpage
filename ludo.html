@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Elite - Pro Edition</title>
+    <link rel="stylesheet" href="ludo.css">
+</head>
+<body>
+
+    <div id="deposit-section">Deposit: $<span id="wallet-balance">$</span></div>
+
+    <div id="lobby" class="lobby-container">
+        <h1>LUDO ELITE</h1>
+        <p>Select Game Mode & Room</p>
+        
+        <select id="mode-select" class="game-dropdown">
+            <option value="2">2 Players (Red vs Yellow)</option>
+            <option value="3">3 Players (Red, Green, Yellow)</option>
+            <option value="4" selected>4 Players</option>
+        </select>
+
+        <div class="rooms-grid">
+            <div class="room-card" onclick="processEntry(50)">Entry: $50</div>
+            <div class="room-card" onclick="processEntry(100)">Entry: $100</div>
+            <div class="room-card" onclick="processEntry(250)">Entry: $250</div>
+            <div class="room-card" onclick="processEntry(500)">Entry: $500</div>
+        </div>
+    </div>
+
+    <div id="game-screen" class="hidden">
+        <div class="board-wrapper">
+            
+            <div class="player-profile red-pos" id="p-red">
+                <span class="player-name">YOU</span>
+                <div class="dice-spot" id="spot-red"></div> 
+            </div>
+            
+            <div class="player-profile green-pos" id="p-green">
+                <span class="player-name">BOT 1</span>
+                <div class="dice-spot" id="spot-green"></div>
+            </div>
+            
+            <div class="player-profile yellow-pos" id="p-yellow">
+                <span class="player-name">BOT 2</span>
+                <div class="dice-spot" id="spot-yellow"></div>
+            </div>
+            
+            <div class="player-profile blue-pos" id="p-blue">
+                <span class="player-name">BOT 3</span>
+                <div class="dice-spot" id="spot-blue"></div>
+            </div>
+
+            <div class="ludo-board">
+    <div class="base red" id="b-red"><div class="base-inner"><div class="slot" id="r0"></div><div class="slot" id="r1"></div><div class="slot" id="r2"></div><div class="slot" id="r3"></div></div></div>
+    <div class="base green" id="b-green"><div class="base-inner"><div class="slot" id="g0"></div><div class="slot" id="g1"></div><div class="slot" id="g2"></div><div class="slot" id="g3"></div></div></div>
+    <div class="base yellow" id="b-yellow"><div class="base-inner"><div class="slot" id="y0"></div><div class="slot" id="y1"></div><div class="slot" id="y2"></div><div class="slot" id="y3"></div></div></div>
+    <div class="base blue" id="b-blue"><div class="base-inner"><div class="slot" id="b0"></div><div class="slot" id="b1"></div><div class="slot" id="b2"></div><div class="slot" id="b3"></div></div></div>
+
+    <div class="center-finish" id="center-area">
+        <div class="tri red-t"></div>
+        <div class="tri green-t"></div>
+        <div class="tri yellow-t"></div>
+        <div class="tri blue-t"></div>
+        
+        <div id="main-dice" class="dice" onclick="handleDiceClick()">⚀</div>
+    </div>
+
+    <div id="cells-container" style="display: contents;"></div>
+</div>
+
+    <script src="ludo.js"></script>
+</body>
+</html>

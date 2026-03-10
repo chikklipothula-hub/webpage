@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal</title>
+    <link rel="stylesheet" href="withdraw.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="withdraw-header">
+            <div class="back-icon" onclick="history.back()">❮</div>
+            <div class="header-title">Withdraw</div>
+            <div class="records-link" onclick="openRecords()">Records</div>
+        </header>
+
+        <div class="balance-container">
+            <p>Balance</p>
+            <h1>₹0</h1>
+        </div>
+
+        <div class="add-bank-wrapper">
+            <button class="add-bank-btn" onclick="addBankCard()">Add Bank Card</button>
+        </div>
+
+        <div class="input-section">
+            <label class="input-label">Amount</label>
+            <div class="input-field-wrapper">
+                <input type="number" id="withdrawAmount" placeholder="200 ~ 50000" oninput="checkButtonState()">
+            </div>
+            
+            <div class="limit-info">
+                <div class="fee-info">
+                    </div>
+                <div class="val-info">
+                    <p>Maximum:<span class="cyan-text">0</span></p>
+                    <p>Minimum:200</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="policy-wrapper">
+            <input type="checkbox" id="policyCheck" checked onchange="checkButtonState()">
+            <label for="policyCheck">I agree <span class="policy-blue" onclick="showPolicy()">Withdrawal Policy</span></label>
+        </div>
+
+        <div class="footer-action">
+            <button id="submitBtn" class="btn-disabled" disabled onclick="processWithdrawal()">Withdrawal</button>
+        </div>
+    </div>
+
+    <script src="withdraw.js"></script>
+</body>
+</html>

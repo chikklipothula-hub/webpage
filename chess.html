@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandmaster AI | Chess</title>
+    <link rel="stylesheet" href="chess.css">
+</head>
+<body>
+    <div class="glass-container">
+        <header>
+            <div class="score-board">
+                <div class="score-info">
+                    <span class="player-label">PLAYER</span>
+                    <span id="white-score" class="score-val">0</span>
+                </div>
+                <div id="game-status" class="status-badge">White's Turn</div>
+                <div class="score-info">
+                    <span id="black-score" class="score-val">0</span>
+                    <span class="player-label">BOT</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-content">
+            <div class="graveyard-container">
+                <p>Bot's Loot</p>
+                <div class="graveyard" id="captured-white"></div>
+            </div>
+
+            <div id="chess-board" class="board"></div>
+
+            <div class="graveyard-container">
+                <p>Your Loot</p>
+                <div class="graveyard" id="captured-black"></div>
+            </div>
+        </main>
+
+        <footer class="controls">
+            <button class="main-btn" onclick="location.reload()">Reset Match</button>
+            <button class="secondary-btn" onclick="window.location.href='home.html'">Exit to Home</button>
+        </footer>
+    </div>
+    <script src="chess.js"></script>
+</body>
+</html>

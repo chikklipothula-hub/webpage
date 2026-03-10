@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastWin Dashboard</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+<div class="app">
+    <header class="header">
+        <div class="user-info">
+            <img src="images/user.jpg" class="user-img" alt="User Profile">
+            <h3 id="userPhone">User_29458</h3> <p>Wallet Balance</p>
+        </div>
+        <div class="balance-box">
+            ₹ <span id="balance">0</span>
+        </div>
+    </header>
+
+    <div class="actions">
+        <button onclick="location.href='deposit.html'">Deposit</button>
+        <button>Referral</button>
+        <button onclick="openWithdraw()">Withdraw</button>
+    </div>
+
+    <div class="games-grid">
+        <div class="game-item" onclick="openLudo()">
+            <img src="images/ludo.jpg" alt="Ludo">
+            <div class="game-info">
+                <h3>Ludo</h3>
+                <span>2-6 Players</span>
+            </div>
+        </div>
+
+        <div class="game-item" onclick="openSnake()">
+            <img src="images/snake.jpg" alt="Snake & Ladder">
+            <div class="game-info">
+                <h3>Snake & Ladder</h3>
+            </div>
+        </div>
+
+        <div class="game-item" onclick="openChess()">
+            <img src="images/chess.jpg" alt="Chess">
+            <div class="game-info">
+                <h3>Chess</h3>
+            </div>
+        </div>
+
+        <div class="game-item" onclick="openCarrom()">
+            <img src="images/carrom.jpg" alt="Carrom">
+            <div class="game-info">
+                <h3>Carrom</h3>
+            </div>
+        </div>
+
+        <div class="game-item" onclick="openRummy()">
+            <img src="images/rummy.jpg" alt="Rummy">
+            <div class="game-info">
+                <h3>Rummy</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="home.js"></script>
+
+<script>
+    function openLudo() {
+        window.location.href = "ludo.html";
+    }
+
+    function openSnake() {
+        window.location.href = "snake.html";
+    }
+
+    function openChess() {
+        window.location.href = "chess.html";
+    }
+
+    function openCarrom() {
+        window.location.href = "carrom.html";
+    }
+
+    function openRummy() {
+        // This will open your new rummy selection modal/page
+        window.location.href = "rummy_selection.html";
+    }
+
+    function openWithdraw() {
+        // Matches your previously requested filename
+        window.location.href = "withdraw.html";
+    }
+</script>
+</body>
+</html>

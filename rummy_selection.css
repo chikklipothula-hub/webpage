@@ -1,0 +1,48 @@
+.bg-overlay {
+    background: #000;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.selection-modal {
+    background: radial-gradient(circle at center, #153222, #0a1610);
+    border: 1.5px solid #d4af37; /* Gold border */
+    border-radius: 15px;
+    width: 380px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.modal-header { display: flex; justify-content: center; position: relative; margin-bottom: 10px; }
+.modal-header h3 { font-style: italic; font-weight: bold; margin: 0; }
+.close-btn { position: absolute; right: 0; cursor: pointer; color: #7fbd9b; }
+
+.game-type-tabs { display: flex; justify-content: space-around; margin: 15px 0; }
+.tab { background: none; border: none; color: #7fbd9b; font-weight: bold; cursor: pointer; }
+.tab.active { background: #2ecc71; color: white; border-radius: 5px; padding: 4px 12px; }
+
+.player-toggle { display: flex; justify-content: center; gap: 25px; margin: 15px 0; font-size: 14px; }
+
+.data-table { background: rgba(0, 0, 0, 0.3); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+.table-head { display: flex; justify-content: space-between; padding: 8px 15px; color: #d4af37; font-size: 12px; border-bottom: 1px solid #1a3025; }
+
+.entry-row { display: flex; justify-content: space-between; padding: 10px 15px; border-bottom: 1px solid #111; cursor: pointer; transition: 0.2s; }
+.entry-row:hover { background: rgba(46, 204, 113, 0.1); }
+.entry-row.selected { background: #2ecc71; color: white; }
+
+.practice-now-btn {
+    width: 100%;
+    background: linear-gradient(to bottom, #f39c12, #e67e22);
+    border: 1px solid #fff;
+    border-radius: 25px;
+    color: #fff;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}

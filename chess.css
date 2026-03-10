@@ -1,0 +1,110 @@
+:root {
+    --white-sq: #271e01;
+    --black-sq: #cc8f1d3d;
+    --accent: #e9e5da;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle, #1e293b, #0f172a);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.glass-container {
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--glass);
+    padding: 15px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.score-val {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--accent);
+    margin: 0 10px;
+}
+
+.status-badge {
+    padding: 5px 20px;
+    background: var(--accent);
+    color: black;
+    border-radius: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Layout */
+.game-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    border: 10px solid #2d2d2d;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.cell {
+    width: 60px; height: 60px;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 45px; cursor: pointer;
+}
+
+.white-sq { background: var(--white-sq); }
+.black-sq { background: var(--black-sq); }
+.selected { background: #f59e0b !important; }
+
+/* Graveyard */
+.graveyard-container p {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.graveyard {
+    width: 50px;
+    min-height: 400px;
+    background: var(--glass);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    font-size: 30px;
+}
+
+#captured-white { color: #fff; } /* Pieces bot took from you */
+#captured-black { color: #000; text-shadow: 0 0 2px white; } /* Pieces you took */
+
+/* Buttons */
+.controls { margin-top: 30px; display: flex; gap: 15px; justify-content: center; }
+button {
+    padding: 12px 30px; border: none; border-radius: 30px;
+    font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.main-btn { background: var(--accent); color: black; }
+.secondary-btn { background: #334155; color: white; }

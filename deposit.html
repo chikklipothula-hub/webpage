@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recharge System</title>
+    <link rel="stylesheet" href="deposit.css">
+</head>
+<body>
+    <div id="app">
+        <header class="header">
+            <span class="back-arrow" id="backBtn" style="display: none;" onclick="goBack()">❮</span>
+            <h2 id="headerTitle">Recharge</h2>
+            <span class="help">Help</span>
+        </header>
+
+        <div id="step1" class="view">
+            <div class="balance-card">
+                <p>Balance</p>
+                <h1>₹0</h1>
+            </div>
+
+            <div class="input-section">
+                <p>Amount</p>
+                <div class="amount-input-wrapper">
+                    <span class="currency">₹</span>
+                    <input type="number" id="rechargeAmount" placeholder="Enter Your Amount">
+                </div>
+            </div>
+
+            <div class="grid-amounts">
+                <button onclick="setAmount(100)">₹100</button>
+                <button onclick="setAmount(300)">₹300</button>
+                <button onclick="setAmount(500)">₹500</button>
+                <button onclick="setAmount(1000)">₹1000</button>
+                <button onclick="setAmount(5000)">₹5000</button>
+                <button onclick="setAmount(15000)">₹15000</button>
+                <button onclick="setAmount(45000)">₹45000</button>
+                <button onclick="setAmount(80000)">₹80000</button>
+            </div>
+
+            <button class="main-btn recharge-btn" onclick="goToStep2()">Recharge</button>
+        </div>
+
+        <div id="step2" class="view" style="display: none;">
+            <div class="payment-banner">
+                <div class="qr-box">
+                    <img src="images/qr.png" alt="Payment QR Code" id="main-qr">
+                    <p>Scan to Pay</p>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <div class="step">
+                    <span class="dot">1</span>
+                    <p>Scan the QR code and complete your payment.</p>
+                </div>
+                
+                <div class="step">
+                    <span class="dot">2</span>
+                    <p><strong>If you paid, upload screenshot.</strong></p>
+                </div>
+
+                <div class="upload-container" onclick="triggerUpload()">
+                    <input type="file" id="fileInput" hidden accept="image/*" onchange="handleFileSelect(event)">
+                    <div id="uploadUI">
+                        <span class="plus-icon">+</span>
+                        <p>Upload Screenshot</p>
+                    </div>
+                    <img id="previewImg" style="display:none;">
+                </div>
+
+                <div class="step">
+                    <span class="dot">3</span>
+                    <p>Click Submit to verify your deposit.</p>
+                </div>
+            </div>
+
+            <div class="action-footer">
+                <button class="btn-secondary">Help</button>
+                <button class="main-btn" onclick="finalSubmit()">Submit</button>
+            </div>
+        </div>
+
+        <nav class="nav-bar">
+            <div class="nav-item">Home</div>
+            <div class="nav-item">Invite</div>
+            <div class="nav-item active">Recharge</div>
+            <div class="nav-item">My</div>
+        </nav>
+    </div>
+
+    <script src="deposit.js"></script>
+</body>
+</html>

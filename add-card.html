@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bank Card</title>
+    <link rel="stylesheet" href="add-card.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <div class="back-icon" onclick="history.back()">❮</div>
+            <div class="header-title">Add Bank Card</div>
+            <div></div> </header>
+
+        <div class="form-container">
+            <p class="form-tip">Please ensure the information is correct to avoid withdrawal failures.</p>
+
+            <div class="input-group">
+                <label>Actual Name</label>
+                <input type="text" id="userName" placeholder="Enter your full name">
+            </div>
+
+            <div class="input-group">
+                <label>Bank Account Number</label>
+                <input type="number" id="accountNumber" placeholder="Enter account number">
+            </div>
+
+            <div class="input-group">
+                <label>IFSC Code</label>
+                <input type="text" id="ifscCode" placeholder="Enter 11-digit IFSC code">
+            </div>
+
+            <div class="input-group">
+                <label>Bank Name</label>
+                <input type="text" id="bankName" placeholder="e.g. State Bank of India">
+            </div>
+
+            <button class="save-btn" onclick="saveBankDetails()">Add Bank Card</button>
+        </div>
+    </div>
+
+    <script src="add-card.js"></script>
+</body>
+</html>
